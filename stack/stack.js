@@ -2,7 +2,6 @@ class Stack {
 
     constructor(){
         this.dataBase = []
-        this.count = 0
     }
 
     push(data){}
@@ -11,7 +10,9 @@ class Stack {
 
     remove(index){}
 
-    length(){}
+    length(){
+        return this.dataBase.length
+    }
 
     isEmpty(){}
 
