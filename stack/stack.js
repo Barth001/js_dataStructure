@@ -2,9 +2,13 @@ class Stack {
 
     constructor(){
         this.dataBase = []
+        this.count = 0
     }
 
-    push(data){}
+    push(data){
+        this.dataBase[this.count] = data
+        this.count++;
+    }
 
     pop(){}
 
@@ -18,7 +22,13 @@ class Stack {
 
     isPresent(data){}
 
-    print(){}
+    print(){
+        this.dataBase.forEach(data => console.log(data))
+    }
 }
 
 st = new Stack()
+st.push(71);
+st.push(72)
+st.print()
+console.log(st.length());
