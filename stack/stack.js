@@ -10,25 +10,39 @@ class Stack {
         this.count++;
     }
 
-    pop(){}
-
-    remove(index){}
-
-    length(){
-        return this.dataBase.length
+    pop(){
+        let data = this.dataBase[this.count-1]
+        this.count--; 
+        return data
     }
 
-    isEmpty(){}
 
-    isPresent(data){}
+    length(){
+        return this.count
+    }
+
+    isEmpty(){
+        return this.count > 0
+    }
+
+    isPresent(data){
+        
+    }
 
     print(){
-        this.dataBase.forEach(data => console.log(data))
+        if(this.count <= 0){
+            console.log("Empty stack");
+            return;
+        }
+        for(let i = 0; i < this.count; i++)
+        console.log(this.dataBase[i]);
     }
 }
 
 st = new Stack()
 st.push(71);
 st.push(72)
+st.pop()
 st.print()
+console.log(st.isEmpty());
 console.log(st.length());
