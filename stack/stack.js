@@ -26,7 +26,11 @@ class Stack {
     }
 
     isPresent(data){
-        
+        for(let i = 0; i < this.count; i++){
+            if(this.dataBase[i] === data)
+            return true;
+        }
+        return false;
     }
 
     print(){
@@ -43,6 +47,8 @@ st = new Stack()
 st.push(71);
 st.push(72)
 st.pop()
+// st.pop()
 st.print()
+console.log(st.isPresent(63));
 console.log(st.isEmpty());
 console.log(st.length());
