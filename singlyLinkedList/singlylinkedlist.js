@@ -14,7 +14,15 @@ class SinglyLinkedList{
 
     print(){}
 
-    addAtBeginning(data){}
+    addAtBeginning(data){
+        let new_node = new Node(data, null)
+        if(this.head == null){
+            this.head = new_node
+        } else {
+            new_node.next = this.head
+            this.head = new_node
+        }
+    }
 
     addAtEnd(data){}
 
@@ -27,3 +35,8 @@ class SinglyLinkedList{
     removeAtIndex(index){}
     
 }
+
+let sll = new SinglyLinkedList()
+sll.addAtBeginning(70)
+sll.addAtBeginning(72)
+sll.addAtBeginning(74)
